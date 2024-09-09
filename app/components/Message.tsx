@@ -23,7 +23,10 @@ function Message() {
       // Preparar el payload para enviar
       const payload = {
         model: "llama3:8b",
-        messages: [{ role: "user", content: message }],
+        messages: [
+          { role: "system", content: "Por favor, responde exclusivamente sobre temas fiscales relacionados con la facturación electrónica conforme a la ley mexicana, incluyendo la Ley del Impuesto sobre la Renta (LISR), la Ley del Impuesto al Valor Agregado (IVA), y los artículos pertinentes de la miscelánea fiscal. No respondas a preguntas sobre otros temas o áreas que no estén relacionadas con la legislación fiscal mexicana y la facturación electrónica. Si se te pregunta sobre algo fuera de este ámbito, indica claramente que no puedes proporcionar información sobre ese tema." },
+          { role: "user", content: message }
+        ],
       };
 
       fetch("http://74.208.11.91:8080/api/chat", {
