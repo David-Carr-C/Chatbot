@@ -17,9 +17,9 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
-import { Bird, Rabbit, Settings, Turtle } from "lucide-react";
+import { Bird, Rabbit, Settings } from "lucide-react";
 
-export default function Content() {
+export default function Content() { /* Just for devices width */
   return (
     <Drawer>
       <DrawerTrigger asChild>
@@ -53,9 +53,9 @@ export default function Content() {
                       <Rabbit className="size-5" />
                       <div className="grid gap-0.5">
                         <p>
-                          Neural{" "}
+                          App{" "}
                           <span className="font-medium text-foreground">
-                            Genesis
+                            Prolog
                           </span>
                         </p>
                         <p className="text-xs" data-description>
@@ -69,29 +69,13 @@ export default function Content() {
                       <Bird className="size-5" />
                       <div className="grid gap-0.5">
                         <p>
-                          Neural{" "}
+                          App{" "}
                           <span className="font-medium text-foreground">
                             Explorer
                           </span>
                         </p>
                         <p className="text-xs" data-description>
                           Performance and speed for efficiency.
-                        </p>
-                      </div>
-                    </div>
-                  </SelectItem>
-                  <SelectItem value="quantum">
-                    <div className="flex items-start gap-3 text-muted-foreground">
-                      <Turtle className="size-5" />
-                      <div className="grid gap-0.5">
-                        <p>
-                          Neural{" "}
-                          <span className="font-medium text-foreground">
-                            Quantum
-                          </span>
-                        </p>
-                        <p className="text-xs" data-description>
-                          The most powerful model for complex computations.
                         </p>
                       </div>
                     </div>
